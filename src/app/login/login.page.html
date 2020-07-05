@@ -4,8 +4,8 @@
   </div>
   <form [formGroup]="loginForm" (ngSubmit)="login()">
     <ion-item>
-      <ion-label position="floating">Username</ion-label>
-      <ion-input type="text" formControlName="username"></ion-input>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Password</ion-label>
@@ -13,6 +13,9 @@
     </ion-item>
     <button ion-button type="submit" class="btn" [disabled]="!loginForm.valid">Login</button>
   </form>
+  <div class="btns">
+    <button ion-button type="submit" [routerLink]="['/register']" class="btn-link" >Register</button>
+  </div>
   
 </ion-content>
 

@@ -6,7 +6,6 @@ ion-content{
     height: 30%;
     width: 100%;
     max-height: 30%;
-    // background-color: darken($color: #000000, $amount: 0);
     margin-bottom: 5%;
 }
 
@@ -16,7 +15,7 @@ ion-item{
     width: 90%;
     margin: 0 auto;
     --color: white;
- }
+}
 
 form {
     text-align: center;
@@ -30,11 +29,22 @@ form {
     
 }
 
-button {
+.btns{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.btn {
     background-color: #ff165a;
     color: white;
     border-radius: 18px;
     width: 75%;
     padding: 10px;
     margin-top: 7%;
+}
+
+.btn-link {
+    margin: 0 auto;
+    background: transparent;
+    color: white;
 }
