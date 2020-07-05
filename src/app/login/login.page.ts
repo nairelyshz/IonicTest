@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.auth.loginFirebase(this.loginForm.value).then(response => {
+      this.auth.loginFirebase(this.loginForm.value).then(response => {
       console.log(response);
       //this.router.navigate('/home'); 
     });
