@@ -1,5 +1,7 @@
 {
   "name": "humantech-ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

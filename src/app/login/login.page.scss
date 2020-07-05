@@ -1,0 +1,40 @@
+ion-content{
+    --background: url(../../assets/Backgrounds/reactnative2.jpeg);
+}
+
+.img-login{
+    height: 30%;
+    width: 100%;
+    max-height: 30%;
+    // background-color: darken($color: #000000, $amount: 0);
+    margin-bottom: 5%;
+}
+
+ion-item{
+    --ion-background-color: transparent;
+    --border-color: white;
+    width: 90%;
+    margin: 0 auto;
+    --color: white;
+ }
+
+form {
+    text-align: center;
+}
+.item-has-focus{
+    --highlight-background: #e2e2e2;
+     
+}
+.item-has-focus ion-label {
+    color: white !important;
+    
+}
+
+button {
+    background-color: #ff165a;
+    color: white;
+    border-radius: 18px;
+    width: 75%;
+    padding: 10px;
+    margin-top: 7%;
+}
