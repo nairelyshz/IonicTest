@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  
+  <h5>Register</h5>
+  <div class="img-login">
+    <img src=""/>
+  </div>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input> 
+    </ion-item>
+    <button ion-button type="submit"  class="btn" [disabled]="!registerForm.valid">Register</button>
+  </form>
+  <div class="btns">
+    <button ion-button type="submit" [routerLink]="['/login']" class="btn-link" >Login</button>
+  </div>
 </ion-content>
