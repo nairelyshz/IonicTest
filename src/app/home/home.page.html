@@ -1,20 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div style="width: 100%;">
+    <ion-slides pager="false" [options]="slideOpts">
+      <ion-slide *ngFor="let c of characteres">
+        <div class="card">
+          <img src="{{c.image}}" alt="{{c.name}}">
+          <p></p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div style="background: purple; height: auto;width: 100%;">
+    <ion-list>
+      <ion-item *ngFor="let e of episodes">
+        <div class="episode">
+            <ion-grid>
+              <ion-row>
+                <!-- <ion-col>
+                  <img src="{{e.characters[0]}}"/>
+                </ion-col> -->
+                <ion-col>
+                  <h5>{{e.name}}</h5>
+                  <strong>Episode: </strong> {{e.episode}}
+                </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>

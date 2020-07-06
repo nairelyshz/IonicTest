@@ -12,7 +12,6 @@ export class AuthService {
   }
 
   public async loginFirebase(userData){
-    console.log("login");
     try{
       return await this.fAuth.signInWithEmailAndPassword(userData.email, userData.password);
     }catch (error) {
@@ -21,7 +20,6 @@ export class AuthService {
   }
 
   public async registerFirebase(userData){
-    console.log(userData);
     try{
       return await this.fAuth.createUserWithEmailAndPassword(userData.email, userData.password);
     }catch (error) {
