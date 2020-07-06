@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class AuthService {
   public isLogged: any = false;
 
-  constructor(private fAuth: AngularFireAuth) {
+  constructor(private fAuth: AngularFireAuth, private toastController: ToastController) {
     this.fAuth.authState.subscribe((user)=>(this.isLogged = user));
   }
 
@@ -15,7 +16,7 @@ export class AuthService {
     try{
       return await this.fAuth.signInWithEmailAndPassword(userData.email, userData.password);
     }catch (error) {
-      console.log('Error log in ', error);
+      this.presentToast();
     }
   }
 
@@ -23,7 +24,15 @@ export class AuthService {
     try{
       return await this.fAuth.createUserWithEmailAndPassword(userData.email, userData.password);
     }catch (error) {
-      console.log('Error log in ', error);
+      this.presentToast();
     }
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Error! check the information',
+      duration: 3000
+    });
+    toast.present();
   }
 }

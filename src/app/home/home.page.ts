@@ -24,14 +24,12 @@ export class HomePage {
 
   getAllCharateres(){
     this.apiService.getCharacteres().subscribe((response:any) => {
-      console.log(response);
       this.characteres = response.results;
     });
   }
 
   getAllEpisodes(){
     this.apiService.getEpisodes().subscribe((response: any) => {
-      console.log(response);
       this.episodes = response.results;
 
     });
